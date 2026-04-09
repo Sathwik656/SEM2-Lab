@@ -2,7 +2,7 @@ import re
 
 #Date matching
 text = "Hello my date of birth is 11/01/2004 and my friends birthday is 08/04/2004"
-p = (r"\b(0[1-9]|[1-2][0-9]|3[0-1])/(0[0-9]|1[1-2])/\d{4}\b")
+p = (r"\b(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[1-2])/\d{4}\b")
 data = re.findall(p.replace('(','(?:'),text)
 print("Dates found: ",data)
 

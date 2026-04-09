@@ -11,9 +11,11 @@ X, y = data.data, data.target
 X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train,y_train)
 y_pred = model.predict(X_test)
+
 print('Accuracy score: ',accuracy_score(y_test, y_pred))
 
 scores = cross_val_score(model, X, y, cv=kf, scoring='accuracy')

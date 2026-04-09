@@ -1,5 +1,4 @@
-import nltk
-from nltk.tokenize import word_tokenize 
+from nltk.tokenize import word_tokenize
 
 print("Welcome to AIMMIT Admission Chatbot!")
 print("Type 'exit' to end the conversation.")

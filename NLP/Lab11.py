@@ -1,6 +1,5 @@
 from nltk import CFG
 from nltk.parse import ShiftReduceParser
-from sklearn import tree
 
 grammar = CFG.fromstring("""
 S -> NP VP  
@@ -16,5 +15,6 @@ sentence = "The boy kicked the ball".split()
 parser = ShiftReduceParser(grammar)
 
 for tree in parser.parse(sentence):
+    print("Hello")
     print(tree)
     tree.pretty_print()
